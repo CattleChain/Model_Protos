@@ -1,0 +1,41 @@
+
+// Farm Identity
+// ref: https://github.com/FIWARE/data-models/tree/master/specs/AgriFood/AgriFarm
+syntax = "proto3";
+
+package cattlechain;
+
+
+message FarmIdentity {
+    string id = 1;
+    string type = 2;
+    string dataCreated = 3;
+    string dataModified = 4;
+    string name = 5;
+    string description = 6;
+    CONTACTPOINT contactPoint = 7;
+    string ownedBy = 8;
+    ADDRESS address = 9;
+    LOCATION location = 10;
+    repeated RELATEDSOURCE relatedSource = 11;
+
+    message CONTACTPOINT {
+        string email = 1;
+        string telephone = 2;
+    }
+
+    message ADDRESS {
+        string addressLocality = 1;
+        string addressCountry = 2;
+        string streetAddress = 3;
+    }
+
+    message LOCATION {
+        string type = 1;
+        repeated float coordinates = 2;
+    }
+    message RELATEDSOURCE {
+        string application = 1;
+        string applicationEntityId = 2;
+    }
+}

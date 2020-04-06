@@ -1,0 +1,56 @@
+// Animal Identity
+// ref: https://github.com/FIWARE/data-models/tree/master/specs/AgriFood/Animal
+
+syntax = "proto3";
+
+package cattlechain;
+
+message AnimalIdentity {
+    string id = 1;
+    string type = 2;
+    Species species = 3;
+    string legalId = 4;
+    string birthdate = 5;
+    Sex sex = 6;
+    string breed = 7;
+    string calvedBy = 8;
+    string siredBy = 9;    
+    LOCATION location = 10;
+    double weight = 11;
+    string ownedBy = 12;
+    string locatedAt = 13;
+    string phenologicalCondition = 14;
+    string reproductiveCondition = 15;
+    string healthCondition = 16;
+    string fedWith = 17;
+    string welfareCondition = 18;
+    repeated AnimalMonitoringEvent events = 19;
+
+    enum Species {
+        DAIRY_CATTLE = 0;
+        BEEF_CATTLE = 1;
+        SHEEP = 2;
+        GOAT = 3;
+        HOURSE = 4;
+        PIG = 5;
+    }
+
+    enum Sex {
+        MALE = 0;
+        FEMALE = 1;
+    }
+
+    message LOCATION {
+        string type = 1;
+        repeated float coordinates = 2;
+    }
+  }
+
+  message AnimalMonitoringEvent {
+    string actityAlert = 1; //distane walked
+    string tempratureAlert = 2; //temprature calculated
+    string weightAlert = 3; //Weight variations
+    string drikingBehaviourAlert = 4; //Regular and frequent use of troughs + apropiate drinking behaviour
+    string restTimeAlert = 5;
+    string dairyTimeAlert = 6;
+}
