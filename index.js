@@ -1,8 +1,8 @@
-const farmIdentity_pb = require('./js/protos/farmIdentity_pb');
+const dairyIdentity_pb = require('./js/protos/dairyIdentity_pb');
 const animalIdentity_pb = require('./js/protos/animalIdentity_pb');
 
 module.exports = {
-    farmIdentity_pb,
+    dairyIdentity_pb,
     animalIdentity_pb,
 }
 

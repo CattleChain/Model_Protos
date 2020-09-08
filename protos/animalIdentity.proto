@@ -24,7 +24,8 @@ message AnimalIdentity {
     string healthCondition = 16;
     string fedWith = 17;
     string welfareCondition = 18;
-    repeated AnimalMonitoringEvent events = 19;
+    repeated AnimalMonitoring monitoring = 19;
+    repeated AnimalWelfareIndicators indicators = 20;
 
     enum Species {
         DAIRY_CATTLE = 0;
@@ -46,11 +47,11 @@ message AnimalIdentity {
     }
   }
 
-  message AnimalMonitoringEvent {
-    string actityAlert = 1; //distane walked
-    string tempratureAlert = 2; //temprature calculated
-    string weightAlert = 3; //Weight variations
-    string drikingBehaviourAlert = 4; //Regular and frequent use of troughs + apropiate drinking behaviour
-    string restTimeAlert = 5;
-    string dairyTimeAlert = 6;
-}
+
+  message AnimalMonitoring {
+    string monitoring = 1;
+  }
+
+  message AnimalWelfareIndicators {
+      string indicator = 1;
+  }

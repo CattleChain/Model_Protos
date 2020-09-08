@@ -1,7 +1,7 @@
 {
   "name": "cattlechain_protos",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "protos",
   "main": "index.js",
   "scripts": {
     "generate": "rm -rf ./js/* && protoc --js_out=import_style=commonjs,binary:./js/. protos/*"
