@@ -1,10 +1,9 @@
 {
   "name": "cattlechain_protos",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "protos",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm run generate",
     "generate": "rm -rf ./js/* && protoc --js_out=import_style=commonjs,binary:./js/. protos/*"
   },
   "author": "Har Preet Singh",
