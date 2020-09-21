@@ -1,9 +1,11 @@
 const dairyIdentity_pb = require('./js/protos/dairyIdentity_pb');
 const animalIdentity_pb = require('./js/protos/animalIdentity_pb');
+const deviceEvents_pb = require('./js/protos/deviceEvents_pb');
 
 module.exports = {
     dairyIdentity_pb,
     animalIdentity_pb,
+    deviceEvents_pb,
 }
 
 //Example
