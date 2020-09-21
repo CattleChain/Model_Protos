@@ -5,7 +5,6 @@ syntax = "proto3";
 
 package cattlechain;
 
-
 message DairyIdentity {
     string id = 1;
     string type = 2;
@@ -18,8 +17,10 @@ message DairyIdentity {
     ADDRESS address = 9;
     LOCATION location = 10;
     repeated RELATEDSOURCE relatedSource = 11;
-    repeated DairyMonitoring monitoring = 12;
-    repeated DairyWelfareIndicators indicators = 13;
+    LANDLOCATION landLocation = 12;
+    repeated string hasBuilding = 13;
+    repeated string hasAgriParcel = 14;
+    repeated string seeAlso = 15;
 
 
     message CONTACTPOINT {
@@ -41,12 +42,8 @@ message DairyIdentity {
         string application = 1;
         string applicationEntityId = 2;
     }
+
+    message LANDLOCATION {
+        string type = 1;
+    }
 }
-
-message DairyMonitoring {
-    string monitoring = 1;
-  }
-
-  message DairyWelfareIndicators {
-      string indicator = 1;
-  }

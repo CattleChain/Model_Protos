@@ -1,0 +1,19 @@
+// Device Events
+
+syntax = "proto3";
+
+package cattlechain;
+
+message DeviceEvents {
+    string id = 1;
+    repeated AnimalMonitoring monitoring = 2;
+    repeated AnimalWelfareIndicators indicators = 3;
+  }
+
+  message AnimalMonitoring {
+    string monitoring = 1;
+
+}
+  message AnimalWelfareIndicators {
+      string indicator = 1;
+  }

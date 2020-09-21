@@ -1,13 +1,31 @@
 {
   "name": "cattlechain_protos",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "protos",
   "main": "index.js",
   "scripts": {
     "generate": "rm -rf ./js/* && protoc --js_out=import_style=commonjs,binary:./js/. protos/*"
   },
-  "author": "Har Preet Singh",
-  "license": "ISC",
+  "author": "Har Preet Singh <harpreet.singh@fiware.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CattleChain/Model_Protos/issues"
+  },
+  "homepage": "https://github.com/CattleChain/Model_Protos#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CattleChain/Model_Protos.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "javascript",
+    "cattlechain",
+    "fiware",
+    "transaction processor",
+    "smart contract",
+    "blockchain"
+  ],
   "dependencies": {
     "google-protobuf": "^3.11.4"
   }

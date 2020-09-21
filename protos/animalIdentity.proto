@@ -24,8 +24,7 @@ message AnimalIdentity {
     string healthCondition = 16;
     string fedWith = 17;
     string welfareCondition = 18;
-    repeated AnimalMonitoring monitoring = 19;
-    repeated AnimalWelfareIndicators indicators = 20;
+    repeated RELATEDSOURCE relatedSoruce = 19;
 
     enum Species {
         DAIRY_CATTLE = 0;
@@ -45,13 +44,9 @@ message AnimalIdentity {
         string type = 1;
         repeated float coordinates = 2;
     }
-  }
 
-
-  message AnimalMonitoring {
-    string monitoring = 1;
-  }
-
-  message AnimalWelfareIndicators {
-      string indicator = 1;
+    message RELATEDSOURCE {
+        string application = 1;
+        string applicationEntityId = 2;
+      }
   }
