@@ -8,11 +8,30 @@ module.exports = {
     deviceEvents_pb,
 }
 
+// const device = new deviceEvents_pb.DeviceEvents();
+// const monitoring = new deviceEvents_pb.AnimalMonitoring();
+// monitoring.setMonitoring('{"payload": {"a": "1", "b": "2"}}');
+// const monitoring1 = new deviceEvents_pb.AnimalMonitoring();
+// monitoring1.setMonitoring('{"payload": {"a": "4", "b": "5"}}');
+// device.setId('1111');
+// device.addMonitoring(monitoring);
+// device.addMonitoring(monitoring1);
+// const data = device.serializeBinary();
+// const info = deviceEvents_pb.DeviceEvents.deserializeBinary(data);
+// console.log(info.getId());
+// // console.log(info.toString());
+
+// for (const item of info.getMonitoringList()) {
+//     // let event = new deviceEvents_pb.AnimalMonitoring();
+//     console.log(item.getMonitoring());
+// }
+
+
 //Example
 // const payload = new animalIdentity_pb.AnimalIdentity();
 // const event = new animalIdentity_pb.AnimalMonitoringEvent();
 
-// event.setActityalert('10');
+// event.setActityalert('10'); 
 // event.setTempraturealert('10');
 // event.setWeightalert('10');
 // event.setDrikingbehaviouralert('10');
